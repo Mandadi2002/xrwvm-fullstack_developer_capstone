@@ -1,100 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a styles.css file in the same directory -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #00b3b3;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #00b3b3;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        nav a.active {
-            background-color: #009999;
-            border-radius: 5px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info p {
-            font-size: 1.2em;
-            color: #555;
-            line-height: 1.6;
-        }
-        .contact-info .bold {
-            font-weight: bold;
-        }
-        .contact-info img {
-            display: block;
-            margin: 0 auto 20px;
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-        }
-        .contact-info .icon {
-            display: block;
-            margin: 20px auto;
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
 </head>
-<body>
-    <header>
-        <h1>Dealerships</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html" class="active">Contact Us</a>
-    </nav>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <div class="contact-info">
-            <img src="dealership.jpg" alt="Dealership Image">
-            <p>If you have any questions, please feel free to contact us at:</p>
-            <p class="bold">Contact Customer Service:</p>
-            <p>support@bestcars.com</p>
-            <p class="bold">Contact our National Advertising team:</p>
-            <p>NationalSales@bestcars.com</p>
-            <p class="bold">Contact our Public Relations team:</p>
-            <p>PR@bestcars.com</p>
-            <p class="bold">Contact the bestcars.com offices:</p>
-            <p>312-611-1111</p>
-            <p class="bold">Become a bestcars.com car dealer:</p>
-            <p>Visit growwithbestcars.com</p>
-        </div>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
+  </nav>
+  
+    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
+      <div class="banner" name="about-header">
+      <!-- Insert header information here -->
+      <h1>Contact Us</h1>
+      </div>
+      <div style="display: flex;flex-direction: row; margin:auto">
+      <div class="card" style="width: 30%;">
+        <img class="card-img-top" src="/static/contactus.png" alt="Card image">
+        <div class="card-body">
+        </div>
+      </div>
+
+      <div class="card" style="width: 60%;">
+        <img class="card-img-top" src="/static/cars.jpeg" alt="Card image">
+        <div class="card-body">
+        </div>
+        </div>
+      <div class="card" style="width: 50%;">
+        <p>If you have any questions, please feel free to contact us at:</p>
+        <p class="bold">Contact Customer Service:</p>
+        <p>support@bestcars.com</p>
+        <p class="bold">Contact our National Advertising team:</p>
+        <p>NationalSales@bestcars.com</p>
+        <p class="bold">Contact our Public Relations team:</p>
+        <p>PR@bestcars.com</p>
+        <p class="bold">Contact the bestcars.com offices:</p>
+        <p>312-611-1111</p>
+        <p class="bold">Become a bestcars.com car dealer:</p>
+        <p>Visit growwithbestcars.com</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+</div>
+
 </html>
