@@ -11,10 +11,32 @@ from django.contrib.auth import login, logout, authenticate
 import logging
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-
+def login_request(request):
+    context = {}
+    # Handles POST request
+    if request.method == "POST":
+        # Get username and password from request.POST dictionary
+        username = request.POST['username']
+        password = request.POST['psw']
+        # Try to check if provide credential can be authenticated
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            # If user is valid, call login method to login current user
+            login(request, user)
+            return redirect('onlinecourse:popular_course_list')
+        else:
+            # If not, return to login page again
+            return render(request, 'onlinecourse/user_login.html', context)
+    else:
+        return render(request, 'onlinecourse/user_login.html', context)
 # Create authentication related views
-
-
+def logout_request(request):
+    # Get the user object based on session id in request
+    print("Log out the user `{}`".format(request.user.username))
+    # Logout user in the request
+    logout(request)
+    # Redirect user back to course list view
+    return redirect('onlinecourse:popular_course_list')
 
 # Add a class-based course list view
 class CourseListView(generic.ListView):
